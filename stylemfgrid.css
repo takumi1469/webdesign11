@@ -1,0 +1,296 @@
+/* style.css */
+:root{
+    --h-color:#401da9;
+    --body-back-color:#fffbf6;
+}
+
+body {
+    font-family: "Gill Sans", sans-serif;
+    margin: 0.5vw;
+    background-color: var(--body-back-color);
+}
+
+.div-header {
+    background-color: #000000;
+    color: #ff00d0;
+    display: flex;
+    width: 100vw; 
+}
+
+@media (min-width:1000px) {
+    .div-header{
+        display: grid;
+        height: 11vw;
+        grid-template-columns: 5% repeat(9, 10.5%);
+        grid-template-rows: 1vw 7vw 3vw;
+    }
+}
+
+.div-nav{
+    grid-row: 2/2;
+    grid-column: 2/6;
+}
+
+.menu-list{
+    padding-left: 0;
+}
+
+.menu-item{
+    margin-left:0;
+}
+
+.div-search{
+    grid-row: 3/4;
+    grid-column: 2/6;
+}
+
+.div-toggle{
+    width: 10vw;
+    height: auto;
+    margin: auto 0 auto 2vw;
+}
+
+.toggle {
+    width: 8vw;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+
+@media (min-width:1000px) {
+    .div-toggle{
+        display: none;
+    }
+}
+
+.div-logo {
+    width: 80vw;
+    max-width:500px; 
+    height: auto;
+    margin: 0 auto 0 auto;
+    grid-row: 2/3;
+    grid-column: 5/10;
+}
+
+.img-logo{
+    display: block;
+    width: 30vw;
+    min-width:200px; 
+    max-width:500px; 
+    height: auto;
+    margin: auto;
+}
+
+.div-login{
+    width: 10vw;
+    height: auto;
+    margin: auto 2vw auto 0;
+    grid-row: 2/3;
+    grid-column: 10/10;
+    align-self: end;
+}
+
+.img-login {
+    width: 8vw;
+    max-width: 70px;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+
+.div-nav{
+    display: none;
+    flex-direction:column;
+    margin:auto auto 0 0;
+}
+
+.div-search{
+    display: none;
+}
+
+@media (min-width:1000px) {
+    .div-nav, .div-search{
+        display: flex;
+    }
+}
+
+.menu-list {
+    list-style-type: none;
+}
+
+.menu-item {
+    margin-right: 2vw;
+    display: inline;
+}
+
+.menu-link {
+    color: #ea5cd0;
+    font-size:1.3vw;
+}
+
+.input-search{
+    width: 25vw;
+    height: 30px;
+    background-color: #d0cdec;
+    margin: 0;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.input-search::placeholder {
+    color: gray;
+    font-size: 20px;
+}
+
+@media (min-width:1000px){
+    .section-banner {
+        width: 100vw; 
+        height: 35vw;
+        display: grid;
+        grid-template-columns: 30% 30% 13% 13% 10%;
+        grid-template-rows: repeat(20, 1fr);
+    }
+}
+
+.section-banner {
+    padding: 2vw;
+    text-align: center;
+}
+
+.img-banner{
+    width: 100%;
+    grid-row: 1/18;
+    grid-column: 1/4;
+}
+
+.img-artists1, .img-artists2{
+    display: none;
+}
+
+@media (min-width:1000px){
+    .img-artists1{
+        display: flex;
+        grid-row: 1/9;
+        grid-column:4/6;
+        width: 100%;
+    }
+    .img-artists2{
+        display: flex;
+        grid-row: 9/18;
+        grid-column:4/6;
+        width: 100%;
+    }
+}
+
+.h1-banner{
+    grid-row: 18/20;
+    grid-column: 1/6;
+}
+
+.div-useful-links {
+    font-style: italic;
+}
+
+h1, h2, h3 {
+    color: var(--h-color);
+    margin: 1vw 0 0 0;
+}
+
+h1 {
+    font-size: clamp(28px, 3.5vw, 100px);
+}       
+h2 {
+    font-size: clamp(24px, 2.5vw, 40px);
+}       
+h3 {
+    font-size: clamp(20px, 1.5vw, 30px);
+}
+
+.h2-article-types{
+    margin-left:1vw;
+}
+
+p{
+    margin:1vw 0 1vw 0;
+}
+
+.section-body{
+    padding:0 1vw 0 2vw;
+    background-color:#f6e5ed;
+    background-clip: content-box;
+}
+
+.div-playlist, .div-useful-links{
+    padding:0 1vw 0 0;
+    background-color:#f6e5ed;
+    background-clip: content-box;
+}
+
+.article{
+    margin: 0;
+    width:96%;
+    text-align: justify;
+    padding:1vw;
+}
+
+.div-spotify{
+    display: flex;
+    flex-direction:row;
+    margin: 2vw 0 2vw 5vw;
+}
+
+@media (min-width:1000px) {
+    .div-body{
+        display: flex;
+        flex-direction: row;
+    }
+    .div-articles{
+        width: 80%
+    }
+    .div-side{
+        width: 25%;
+    }
+    .div-spotify{
+        margin: 1vw 0 1vw 1vw;
+    }
+}
+
+
+.h3-rank{
+    background-color: #0e0e36;
+    border-radius: 20px;
+    color:#ffffff;
+    padding: 0 8px 0 8px;
+    font-size: 20px;
+}
+
+.h3-artist{
+    margin-left:2vw;
+    font-size: 20px;
+}
+
+.li-useful{
+    margin: 0.5vw 0 1vw 0;
+}
+
+footer {
+    background-color: #000000;
+    color: #ff00d0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.ul-footer {
+    list-style-type: none;
+    padding: 0;
+}
+
+.li-footer {
+    display: inline;
+    margin-right: 10px;
+}
+
+.link-footer {
+    color: #bb1bd4;
+    text-decoration: none;
+}
+
+
