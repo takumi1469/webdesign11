@@ -146,9 +146,9 @@ body {
     font-size:clamp(16px, 1.3vw, 25px);
 }
 
-.label-accessibility{
+/* .label-accessibility{
     display: none;
-}
+} */
 
 .input-search{
     width: 25vw;
