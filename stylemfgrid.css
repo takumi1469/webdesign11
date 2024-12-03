@@ -8,6 +8,14 @@
     --footer-text-color3:#f5e6da;
 }
 
+/* for testing accessibility 1.4.12 */
+/* body {
+    line-height: 1.5;
+    margin-bottom: 2em; 
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
+  } */
+
 body {
     font-family: "Gill Sans", sans-serif;
     margin: 0.5vw;
@@ -47,6 +55,12 @@ body {
 .div-search{
     grid-row: 3/4;
     grid-column: 2/6;
+}
+
+.div-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .div-toggle{
