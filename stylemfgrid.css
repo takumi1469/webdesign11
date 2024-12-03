@@ -146,6 +146,10 @@ body {
     font-size:clamp(16px, 1.3vw, 25px);
 }
 
+.label-accessibility{
+    display: none;
+}
+
 .input-search{
     width: 25vw;
     height: 30px;
