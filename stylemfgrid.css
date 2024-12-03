@@ -1,7 +1,11 @@
-/* style.css */
+/* CSS variables for colors */
 :root{
+    --header-back-color:#000000;
     --h-color:#401da9;
     --body-back-color:#fffbf6;
+    --footer-text-color1:#e9dbf6;
+    --footer-text-color2:#cff9b5;
+    --footer-text-color3:#f5e6da;
 }
 
 body {
@@ -11,12 +15,13 @@ body {
 }
 
 .div-header {
-    background-color: #000000;
+    background-color:var(--header-back-color);
     color: #ff00d0;
     display: flex;
     width: 100vw; 
 }
 
+/* change the appearance of header responsively*/
 @media (min-width:1000px) {
     .div-header{
         display: grid;
@@ -56,6 +61,7 @@ body {
     margin: 0 auto 0 auto;
 }
 
+/* Toggle button appears only for mobile */
 @media (min-width:1000px) {
     .div-toggle{
         display: none;
@@ -106,10 +112,25 @@ body {
     display: none;
 }
 
+/* display navigation menu and search form only on desktop */
 @media (min-width:1000px) {
     .div-nav, .div-search{
         display: flex;
     }
+    .menu-item {
+        margin-right: 2vw;
+        display: inline;
+    }
+}
+
+/* shows the menu list upon click of toggle button */
+.div-nav.show {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 8vw;
+    left: 1vw;
+    background-color: var(--header-back-color);
 }
 
 .menu-list {
@@ -118,12 +139,11 @@ body {
 
 .menu-item {
     margin-right: 2vw;
-    display: inline;
 }
 
 .menu-link {
     color: #ea5cd0;
-    font-size:1.3vw;
+    font-size:clamp(16px, 1.3vw, 25px);
 }
 
 .input-search{
@@ -140,6 +160,7 @@ body {
     font-size: 20px;
 }
 
+/* banner uses grid layout for desktop */
 @media (min-width:1000px){
     .section-banner {
         width: 100vw; 
@@ -165,6 +186,7 @@ body {
     display: none;
 }
 
+/* pictures in banner section only appear for desktop */
 @media (min-width:1000px){
     .img-artists1{
         display: flex;
@@ -194,6 +216,7 @@ h1, h2, h3 {
     margin: 1vw 0 0 0;
 }
 
+/* Sizes of hx elements are determined globally here with flexibility by clamp function */
 h1 {
     font-size: clamp(28px, 3.5vw, 100px);
 }       
@@ -237,6 +260,7 @@ p{
     margin: 2vw 0 2vw 5vw;
 }
 
+/* In desktop the article section and spotify/useful-link section are shown side by side */
 @media (min-width:1000px) {
     .div-body{
         display: flex;
@@ -252,7 +276,6 @@ p{
         margin: 1vw 0 1vw 1vw;
     }
 }
-
 
 .h3-rank{
     background-color: #0e0e36;
@@ -278,6 +301,14 @@ footer {
     text-align: center;
 }
 
+.h3-footer{
+    color:var(--footer-text-color1);
+}
+
+.p-footer{
+    color:var(--footer-text-color3);
+}
+
 .ul-footer {
     list-style-type: none;
     padding: 0;
@@ -289,8 +320,6 @@ footer {
 }
 
 .link-footer {
-    color: #bb1bd4;
+    color: var(--footer-text-color2);
     text-decoration: none;
 }
-
-
