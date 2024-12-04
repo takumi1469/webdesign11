@@ -57,6 +57,11 @@ body {
     grid-column: 2/6;
 }
 
+.button-submit-search{
+    font-size: 18px;
+    /* padding:1vw 1vw 1vw 1vw; */
+}
+
 .div-login{
     display: flex;
     flex-direction: column;
