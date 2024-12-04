@@ -22,6 +22,25 @@ body {
     background-color: var(--body-back-color);
 }
 
+/* .div-skiptomain{
+
+} */
+
+.a-skiptomain {
+    position: absolute;
+    top: -9999px;  /* Hide off-screen */
+    left: -9999px;
+}
+
+.a-skiptomain:focus {
+    top: 0;  /* Bring it into view when focused */
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+}
+
 .div-header {
     background-color:var(--header-back-color);
     color: #ff00d0;
@@ -174,7 +193,7 @@ body {
 } */
 
 .input-search{
-    width: 25vw;
+    width: 20vw;
     height: 30px;
     background-color: #d0cdec;
     margin: 0;
